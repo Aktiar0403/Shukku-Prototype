@@ -11,17 +11,26 @@ export default function SplashScreen() {
       exit={{ opacity: 0 }}
       transition={{ duration: 1 }}
     >
+      {/* Floating glow */}
       <motion.div
         className="absolute w-[700px] h-[700px] bg-pink-500/20 blur-[120px] rounded-full top-1/3 left-1/3 animate-pulse"
       ></motion.div>
+
+      {/* Logo + text */}
       <motion.div
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        transition={{ type: "spring", stiffness: 80, damping: 12 }}
+        transition={{ type: 'spring', stiffness: 80, damping: 12 }}
         className="relative text-center"
       >
         <div className="flex justify-center mb-4">
-          <Image src="/heart.svg" alt="Heart" width={80} height={80} className="drop-shadow-[0_0_15px_#EC4899]" />
+          <Image
+            src="/heart.svg"
+            alt="Heart"
+            width={80}
+            height={80}
+            className="drop-shadow-[0_0_15px_#EC4899]"
+          />
         </div>
         <h1 className="text-5xl font-extrabold tracking-wide">SHUKKU</h1>
         <p className="text-pink-100 mt-2 text-sm">
@@ -29,6 +38,7 @@ export default function SplashScreen() {
         </p>
       </motion.div>
 
+      {/* Loading bar */}
       <motion.div
         className="mt-12 w-52 h-1.5 bg-white/30 rounded-full overflow-hidden"
         initial={{ opacity: 0 }}
